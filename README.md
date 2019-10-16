@@ -1,2 +1,3 @@
-# 42 Cursus
-Repo for my 42 cursus projects
+# Libft
+
+This is a Libc copy with few upgrades.
