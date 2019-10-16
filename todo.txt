@@ -1,0 +1,6 @@
+• memcpy	(bug with NULL as both params)
+• memccpy
+• memmove
+• strchr	(does not work with \0)
+• strlcpy
+• strlcat (remake)
