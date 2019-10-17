@@ -1,15 +1,15 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   libft.h                                          .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/09 15:43:05 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 15:08:36 by rolaforg    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: romainlaforgue <romainlaforgue@student.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/09 15:43:05 by rolaforg          #+#    #+#             */
+/*   Updated: 2019/10/17 15:38:07 by romainlafor      ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -32,6 +32,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+void    ft_putchar_fd(char c, int fd);
 char	*ft_strdup(const char *s1);
 char	*ft_strstr(const char *haystack, const char *needle);
 int		ft_strcmp(const char *s1, const char *s2);
