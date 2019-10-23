@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/16 14:23:00 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 14:44:48 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/23 15:18:14 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,15 +15,19 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	void	*tmp;
-	void	*res;
-	size_t	i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	res = NULL;
-	tmp = NULL;
-	i = ft_strlen((char *)dst);
-	res = ft_memcpy(res, dst, i);
-	tmp = ft_memcpy(tmp, src, len);
-	dst = ft_memcpy(dst, tmp, len);
-	return (res);
+	s = src;
+	d = dst;
+	if (s >= d)
+		ft_memcpy(d, s, len);
+	else
+	{
+		s += len;
+		d += len;
+		while (len--)
+			*--d = *--s;
+	}
+	return (dst);
 }

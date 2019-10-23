@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/16 15:07:46 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 16:18:36 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/22 13:31:30 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,8 +19,6 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char	*srctmp;
 	unsigned char	*dsttmp;
 
-	if (!dst || !src)
-		return (NULL);
 	i = 0;
 	srctmp = (unsigned char *)src;
 	dsttmp = (unsigned char *)dst;
