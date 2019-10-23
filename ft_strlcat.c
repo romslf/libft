@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_strlcat.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
+/*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 15:56:43 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 16:33:28 by romainlafor ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/23 14:22:34 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,7 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t		n;
-	size_t 		l;
+	size_t		l;
 	char		*d;
 	const char	*s;
 
@@ -27,8 +27,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		d++;
 	l = d - dst;
 	n = size - l;
-	if (n <= 0 || n < ft_strlen((char *)src))
-		return (l + ft_strlen((char *)src));		
+	if (n <= 0)
+		return (l + ft_strlen((char *)src));
 	while (*s != '\0')
 	{
 		if (n > 1)
