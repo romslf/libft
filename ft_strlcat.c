@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_strlcat.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 15:56:43 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 12:08:46 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/22 16:33:28 by romainlafor ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,20 +16,28 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t		n;
+	size_t 		l;
 	char		*d;
 	const char	*s;
 
 	d = dst;
 	s = src;
-	while (*d != '\0')
+	n = size;
+	while (*d != '\0' && n-- != 0)
 		d++;
-	n = d - dst;
-	n = size - n;
-	while (*s != '\0' && n > 1)
+	l = d - dst;
+	n = size - l;
+	if (n <= 0 || n < ft_strlen((char *)src))
+		return (l + ft_strlen((char *)src));		
+	while (*s != '\0')
 	{
-		*d++ = *s++;
-		n--;
+		if (n > 1)
+		{
+			*d++ = *s;
+			n--;
+		}
+		s++;
 	}
 	*d = '\0';
-	return (d - dst + ft_strlen((char *)src));
+	return (l + (s - src));
 }
