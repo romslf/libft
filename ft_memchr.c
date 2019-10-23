@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_memchr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 20:41:00 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 16:45:42 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/23 21:21:03 by romainlafor ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,18 +15,18 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t				i;
+	unsigned char		chr;
 	const unsigned char	*str;
 
-	i = 0;
 	str = s;
-	while (i < n)
+	chr = (unsigned char)c;
+	while (n--)
 	{
-		if (str[i] == (unsigned char)c)
-			return ((void *)s + i);
-		i++;
+		if (*str == chr)
+			return ((void *)str);
+		str++;
 	}
 	if ((char)c == '\0')
-		return ((void *)s + i);
+		return ((void *)str);
 	return (NULL);
 }

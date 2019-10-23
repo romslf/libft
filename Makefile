@@ -37,7 +37,7 @@ OBJS	= ${SRCS:.c=.o}
 NAME	= libft.a
 
 CC		= gcc
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -O2 -Wall -Wextra -Werror
 
 RM		= rm -f
 

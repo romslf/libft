@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_bzero.c                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rolaforg <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 21:19:55 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/09 18:04:50 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/23 21:30:05 by romainlafor ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,5 +15,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, '\0', n);
+	char	*str;
+
+	str = s;
+	while (n--)
+		*str++ = '\0';
 }
