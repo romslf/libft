@@ -6,7 +6,7 @@
 /*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:55:35 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 19:47:15 by romainlafor ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/23 21:40:31 by romainlafor ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,13 +24,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)haystack);
 	while (haystack[i] && i + j < len)
 	{
-		// j = 0;
-		// while (haystack[i + j] == needle[j] && i + j < len)
-		// {
-		// 	if (needle[j + 1] == '\0')
-		// 		return ((char *)haystack + i);
-		// 	j++;
-		// }
 		if (haystack[i + j] == needle[j])
 		{
 			if (needle[++j] == '\0')
