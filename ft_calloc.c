@@ -6,7 +6,7 @@
 /*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/16 14:19:39 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 21:34:12 by romainlafor ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/23 21:43:38 by romainlafor ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,6 @@ void	*ft_calloc(size_t count, size_t size)
 	i = 0;
 	if (!(p = malloc(count * size)))
 		return (NULL);
-	while (count--)
-		*p++ = '\0';
+	ft_bzero(p, count);
 	return (p);
 }
