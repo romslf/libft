@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_memchr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
+/*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 20:41:00 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 21:21:03 by romainlafor ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/29 18:29:48 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */

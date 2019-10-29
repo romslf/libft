@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_calloc.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
+/*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/16 14:19:39 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 21:43:38 by romainlafor ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/29 18:29:48 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
