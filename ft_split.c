@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/29 18:45:13 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/30 14:57:17 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/30 15:04:40 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 
 	i = 0;
-	if (!(res = malloc(sizeof(char *) * (count_words(s, c) + 1))))
+	if (!(s) || !(res = malloc(sizeof(char *) * (count_words(s, c) + 1))))
 		return (NULL);
 	while (*s != '\0')
 	{
