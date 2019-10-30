@@ -6,31 +6,49 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/24 12:06:40 by romainlafor  #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 18:29:48 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/30 16:17:38 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+size_t	is_set(char c, char const *set)
 {
-	char const	*s2;
+	size_t	i;
+
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char const	*s;
 	char		*res;
-	
-	if (!s1)
+	size_t		i;
+
+	if (!(s1))
 		return (NULL);
-	s2 = s1;
-	while (*s1++ == *set++)
-		;
-	while (*s2++ != '\0')
-		;
-	while (*s2-- == *set--)
-		;
-	if (!(res = malloc(sizeof(char) * (s2 - s1) + 1)))
+	s = s1;
+	i = 0;
+	while (*s != '\0')
+		s++;
+	while (is_set(*s, set) || *s == '\0')
+		s--;
+	while (is_set(*s1, set))
+		s1++;
+	if (s < s1)
+		return (ft_calloc(1, sizeof(char)));
+	if (!(res = malloc(sizeof(char) * ((s - s1) + 2))))
 		return (NULL);
-	while (s1 <= s2)
-		*res++ = *s1++;
-	*res = '\0';
+	while (s1 <= s)
+		res[i++] = *s1++;
+	res[i] = '\0';
 	return (res);
 }
