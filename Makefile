@@ -41,6 +41,7 @@ OBJS	= ${SRCS:.c=.o}
 
 BSRCS	= ft_lstnew.c \
 		  ft_lstadd_front.c \
+		  ft_lstadd_back.c \
 		  ft_lstsize.c \
 		  ft_lstlast.c
 
