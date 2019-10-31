@@ -35,9 +35,15 @@ SRCS	= ft_atoi.c \
 		  ft_strncmp.c \
 		  ft_tolower.c \
 		  ft_toupper.c \
-		  ft_lstnew.c
+		  ft_itoa.c
 
 OBJS	= ${SRCS:.c=.o}
+
+BSRCS	= ft_lstnew.c \
+		  ft_lstsize.c
+
+BOBJS	= ${BSRCS:.c=.o}
+
 
 NAME	= libft.a
 
@@ -59,5 +65,9 @@ fclean:		clean
 			${RM} ${NAME}
 
 re:			fclean all
+
+bonus:		${BOBJS}
+			${CC} ${CFLAGS} -c ${BSRCS}
+			ar rc ${NAME} ${BOBJS} libft.h
 
 .PHONY:		all clean fclean re

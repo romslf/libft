@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 11:22:11 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 19:45:57 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/31 16:39:25 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,14 +17,14 @@
 # include <string.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef struct  s_list
 {
-	void			*content;
-	struct s_list	*next;
-}				t_list;
+    void            *content;
+    struct s_list   *next;
+}               t_list;
 
+int		ft_lstsize(t_list *lst);
 t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **alst, t_list *new);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -63,5 +63,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 char	*ft_strcpy(char *dst, const char *src);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+char	*ft_itoa(int n);
 
 #endif
