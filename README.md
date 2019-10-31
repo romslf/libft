@@ -1,6 +1,6 @@
 # Libft
 
-Une copie de Libc avec quelques ajouts.
+Une copie de Libc avec quelques ajouts et modifications.
 
 # Liste des fonctions
 
