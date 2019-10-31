@@ -40,7 +40,9 @@ SRCS	= ft_atoi.c \
 OBJS	= ${SRCS:.c=.o}
 
 BSRCS	= ft_lstnew.c \
-		  ft_lstsize.c
+		  ft_lstadd_front.c \
+		  ft_lstsize.c \
+		  ft_lstlast.c
 
 BOBJS	= ${BSRCS:.c=.o}
 
@@ -59,7 +61,7 @@ $(NAME):	${OBJS}
 all:		${NAME}
 
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${BOBJS}
 
 fclean:		clean
 			${RM} ${NAME}
