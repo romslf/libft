@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 11:22:11 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/31 18:05:58 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/31 20:02:37 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,15 +23,10 @@ typedef struct  s_list
     struct s_list   *next;
 }               t_list;
 
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **alst, t_list *new);
-void	ft_lstadd_back(t_list **alst, t_list *new);
-t_list	*ft_lstlast(t_list *lst);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
-int		ft_isalnum(int c);
 void	*ft_calloc(size_t count, size_t size);
+int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int d);
@@ -67,5 +62,12 @@ char	*ft_strcpy(char *dst, const char *src);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_itoa(int n);
+t_list	*ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstadd_front(t_list **alst, t_list *new);
+void	ft_lstadd_back(t_list **alst, t_list *new);
+int		ft_lstsize(t_list *lst);
 
 #endif
