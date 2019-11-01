@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/31 20:03:32 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/01 13:43:58 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/01 13:49:22 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (lst && del)
+	if (lst && lst->content && del)
 	{
 		(*del)((void*)lst->content);
 		free(lst);
