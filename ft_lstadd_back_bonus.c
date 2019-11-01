@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstadd_back.c                                 .::    .:/ .      .::   */
+/*   ft_lstadd_back_bonus.c                           .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/31 18:05:34 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/31 18:23:05 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/01 14:38:21 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,17 +15,17 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	size_t	i;
+	t_list	*tmp;
 
-	i = 0;
-	if (alst[0] != NULL)
+	if (!alst || !new)
+		return ;
+	if (!*alst)
 	{
-		while (alst[i]->next)
-		{
-			alst[i] = alst[i]->next;
-		}
-		alst[i]->next = new;
+		*alst = new;
 	}
 	else
-		alst[0] = new;
+	{
+		tmp = ft_lstlast(*alst);
+		tmp->next = new;
+	}
 }
