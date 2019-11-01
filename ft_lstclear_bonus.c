@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstclear.c                                    .::    .:/ .      .::   */
+/*   ft_lstclear_bonus.c                              .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/31 18:28:12 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/31 18:51:04 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/01 14:04:41 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,16 +15,17 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	size_t	i;
+	t_list	*tmp;
+	t_list	*nxt;
 
-	i = 0;
-	if (!(lst) || !(lst[0]))
-		return;
-	while (lst[i])
+	tmp = *lst;
+	nxt = NULL;
+	while (tmp)
 	{
-		(*del)(lst[i]);
-		free(lst[i]);
-		i++;
+		nxt = tmp->next;
+		(*del)(tmp->content);
+		free(tmp);
+		tmp = nxt;
 	}
-	lst = NULL;
+	*lst = NULL;
 }
