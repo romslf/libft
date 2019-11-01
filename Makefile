@@ -39,13 +39,13 @@ SRCS	= ft_atoi.c \
 
 OBJS	= ${SRCS:.c=.o}
 
-BSRCS	= ft_lstnew.c \
-		  ft_lstadd_front.c \
-		  ft_lstadd_back.c \
-		  ft_lstsize.c \
-		  ft_lstlast.c \
-		  ft_lstclear.c \
-		  ft_lstdelone.c
+BSRCS	= ft_lstnew_bonus.c \
+		  ft_lstadd_front_bonus.c \
+		  ft_lstadd_back_bonus.c \
+		  ft_lstsize_bonus.c \
+		  ft_lstlast_bonus.c \
+		  ft_lstclear_bonus.c \
+		  ft_lstdelone_bonus.c
 
 BOBJS	= ${BSRCS:.c=.o}
 
