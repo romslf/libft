@@ -46,7 +46,8 @@ BSRCS	= ft_lstnew_bonus.c \
 		  ft_lstlast_bonus.c \
 		  ft_lstclear_bonus.c \
 		  ft_lstdelone_bonus.c \
-		  ft_lstiter.c
+		  ft_lstiter_bonus.c \
+		  ft_lstmap_bonus.c
 
 BOBJS	= ${BSRCS:.c=.o}
 
@@ -62,7 +63,7 @@ $(NAME):	${OBJS}
 			${CC} ${CFLAGS} -c ${SRCS}
 			ar rc ${NAME} ${OBJS} libft.h
 
-all:		${NAME}
+all:		${NAME} bonus
 
 clean:
 			${RM} ${OBJS} ${BOBJS}
