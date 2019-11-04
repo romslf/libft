@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_itoa.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
+/*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/11/04 14:33:57 by romainlafor  #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 15:41:42 by romainlafor ###    #+. /#+    ###.fr     */
+/*   Created: 2019/11/04 17:42:43 by rolaforg     #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/04 17:42:51 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
