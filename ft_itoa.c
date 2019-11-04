@@ -6,7 +6,7 @@
 /*   By: romainlaforgue <romainlaforgue@student.    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/04 14:33:57 by romainlafor  #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 15:22:18 by romainlafor ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/04 15:41:42 by romainlafor ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -33,14 +33,14 @@ size_t	ft_len(int n)
 char	*ft_itoa(int n)
 {
 	char	*res;
-	int		nb;
+	long	nb;
 	size_t	len;
 
-	if (!(n)) return ("0");
-	nb = n;
-	len = ft_len(nb);
-	if (!(res = malloc(sizeof(char) * (len + 1)))) return ("0");
+	len = ft_len(n);
+	if (!(res = malloc(sizeof(char) * (len + 1))))
+		return (NULL);
 	res[len--] = '\0';
+	nb = n;
 	if (len == 0)
 		res[0] = 48;
 	if (nb < 0)
