@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/01 15:05:27 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/01 16:47:21 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/05 16:13:07 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,15 +15,26 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	**liste;
+	t_list	*first;
+	t_list	*liste;
+	void	*new;
 
-	if (!lst || !f || !del ||
-		!(liste = malloc(sizeof(t_list) * ft_lstsize(lst))))
+	new = (*f)(lst->content);
+	if (!(liste = ft_lstnew(new)))
 		return (NULL);
+	first = liste;
+	liste = liste->next;
+	lst = lst->next;
 	while (lst)
 	{
-		ft_lstadd_back(liste, (*f)(lst));
+		new = (*f)(lst->content);
+		if (!(liste = ft_lstnew(new)))
+		{
+			ft_lstclear(&first, del);
+			return (NULL);
+		}
+		liste = liste->next;
 		lst = lst->next;
 	}
-	return (*liste);
+	return (first);
 }
