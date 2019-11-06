@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_strstr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rolaforg <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 13:42:29 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/11 16:51:32 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/06 13:52:52 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,8 +20,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int tflen;
 
 	i = 0;
-	srclen = ft_strlen((char *)haystack);
-	tflen = ft_strlen((char *)needle);
+	srclen = ft_strlen(haystack);
+	tflen = ft_strlen(needle);
 	while (i <= (srclen - tflen))
 	{
 		if (ft_strncmp(haystack + i, needle, tflen) == 0)

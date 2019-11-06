@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 15:56:43 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 14:22:34 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/06 13:52:52 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -28,7 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	l = d - dst;
 	n = size - l;
 	if (n <= 0)
-		return (l + ft_strlen((char *)src));
+		return (l + ft_strlen(src));
 	while (*s != '\0')
 	{
 		if (n > 1)

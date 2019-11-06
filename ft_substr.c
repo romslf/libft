@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/23 23:19:09 by romainlafor  #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 18:17:48 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/06 13:58:56 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,11 +23,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (!(res = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	while (s[i])
-		i++;
-	if (start < i)
+	if (start < ft_strlen(s))
 	{
-		i = 0;
 		while (s[start + i] && i < len)
 		{
 			res[i] = s[start + i];
@@ -35,5 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		}
 		res[i] = '\0';
 	}
+	else
+		return ("");
 	return (res);
 }

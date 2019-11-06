@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/17 17:17:23 by romainlafor  #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 11:24:52 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/06 13:52:52 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	len = ft_strlen((char *)s);
+	len = ft_strlen(s);
 	if (!(str = malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	i = 0;
