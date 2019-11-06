@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 11:22:11 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 17:54:09 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/06 12:22:01 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -56,7 +56,7 @@ char			*ft_strnstr(const char *haystack,
 				const char *needle, size_t len);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
-size_t			ft_strlen(char *str);
+size_t			ft_strlen(const char *str);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 char			*ft_strcpy(char *dst, const char *src);
