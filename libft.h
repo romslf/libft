@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 11:22:11 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/06 12:22:01 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/06 13:25:03 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -73,4 +73,5 @@ int				ft_lstsize(t_list *lst);
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 				void (*del)(void *));
+void			ft_freetab(char **str, size_t size);
 #endif

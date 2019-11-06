@@ -6,7 +6,7 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/29 18:45:13 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/30 16:48:40 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/06 13:28:25 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -72,7 +72,11 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s != c && *s != '\0')
 		{
-			res[i++] = cpy_word(s, c);
+			if (!(res[i++] = cpy_word(s, c)))
+			{
+				ft_freetab(res, count_words(s, c));
+				return (NULL);
+			}
 			s += word_len(s, c);
 		}
 	}
