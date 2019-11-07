@@ -6,14 +6,14 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/24 12:06:40 by romainlafor  #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/30 16:17:38 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/07 15:54:57 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	is_set(char c, char const *set)
+static size_t	is_set(char c, char const *set)
 {
 	size_t	i;
 
@@ -27,7 +27,7 @@ size_t	is_set(char c, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+static char		*ft_trim(char const *s1, char const *set)
 {
 	char const	*s;
 	char		*res;
@@ -51,4 +51,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		res[i++] = *s1++;
 	res[i] = '\0';
 	return (res);
+}
+
+char			*ft_strtrim(char const *s1, char const *set)
+{
+	if (s1 && set)
+		return (ft_trim(s1, set));
+	else
+		return (NULL);
 }

@@ -1,3 +1,7 @@
+NAME	= libft.a
+
+HEADER	= libft.h
+
 SRCS	= ft_atoi.c \
 		  ft_bzero.c \
 		  ft_calloc.c \
@@ -38,9 +42,7 @@ SRCS	= ft_atoi.c \
 		  ft_itoa.c \
 		  ft_freetab.c
 
-OBJS	= ${SRCS:.c=.o}
-
-BSRCS	= ft_lstnew_bonus.c \
+BONUS	= ft_lstnew_bonus.c \
 		  ft_lstadd_front_bonus.c \
 		  ft_lstadd_back_bonus.c \
 		  ft_lstsize_bonus.c \
@@ -50,32 +52,27 @@ BSRCS	= ft_lstnew_bonus.c \
 		  ft_lstiter_bonus.c \
 		  ft_lstmap_bonus.c
 
-BOBJS	= ${BSRCS:.c=.o}
+OBJS_B	=	$(BONUS:.c=.o)
 
+OBJS	= 	$(SRCS:.c=.o)
 
-NAME	= libft.a
+all		: 	$(NAME) 
 
-CC		= gcc
-CFLAGS	= -Wall -Wextra -Werror
+$(NAME)	:	$(OBJS)
+		ar -rcs $(NAME) $(OBJS)
 
-RM		= rm -f
+bonus	:	$(OBJS) $(OBJS_B)
+		ar -rcs $(NAME) $(OBJS) $(OBJS_B)
 
-$(NAME):	${OBJS}
-			${CC} ${CFLAGS} -c ${SRCS}
-			ar rc ${NAME} ${OBJS} libft.h
+%.o:%.c $(HEADER)
+		gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER)
 
-all:		${NAME} bonus
+clean	:
+		rm -f $(OBJS) $(OBJS_B)
 
-clean:
-			${RM} ${OBJS} ${BOBJS}
+fclean	:	clean
+		rm -f $(NAME)
 
-fclean:		clean
-			${RM} ${NAME}
-
-re:			fclean all
-
-bonus:		${BOBJS}
-			${CC} ${CFLAGS} -c ${BSRCS}
-			ar rc ${NAME} ${BOBJS} libft.h
+re		: 	fclean all
 
 .PHONY:		all clean fclean re

@@ -6,14 +6,14 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/29 18:45:13 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/06 13:28:25 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/07 15:54:02 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	word_len(char const *w, char c)
+static size_t	word_len(char const *w, char c)
 {
 	size_t	i;
 
@@ -23,7 +23,7 @@ size_t	word_len(char const *w, char c)
 	return (i);
 }
 
-size_t	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	size_t	cnt;
 	size_t	cnted;
@@ -44,7 +44,7 @@ size_t	count_words(char const *s, char c)
 	return (cnt);
 }
 
-char	*cpy_word(char const *s, char c)
+static char		*cpy_word(char const *s, char c)
 {
 	size_t	i;
 	char	*word;
@@ -58,7 +58,7 @@ char	*cpy_word(char const *s, char c)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**res;
 	size_t	i;

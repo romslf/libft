@@ -6,14 +6,14 @@
 /*   By: rolaforg <rolaforg@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/04 17:42:43 by rolaforg     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 17:42:51 by rolaforg    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/07 15:52:09 by rolaforg    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_len(int n)
+static size_t	ft_len(int n)
 {
 	int		nb;
 	size_t	len;
@@ -30,7 +30,7 @@ size_t	ft_len(int n)
 	return (++len);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*res;
 	long	nb;
